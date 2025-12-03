@@ -53,6 +53,13 @@ input {
 	border-bottom: 1px solid black;
 }
 
+input.color {
+	width: 100px;
+	height: 50px;
+}
+
+.item {}
+
 .messages {
 	font-family: monospace;
 	font-size: .6em;
