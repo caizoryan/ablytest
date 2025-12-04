@@ -11,7 +11,7 @@
 
 :root {
 	--color: black;
-	--background: white;
+	--background:  yellow;
 	--highlight : #ff04;
 	--muted : #2224;
 	--size: 1em;
@@ -112,6 +112,7 @@ input[type="range"]{
 			height: 60px;
 			background: #ffffff66;
 			border-radius: 50px !important;
+		border: 2px solid black;
 		}
 
 		::-moz-range-track {
@@ -125,7 +126,7 @@ input[type="range"]{
 			width: 60px;
 			box-sizing: border-box;
 			border-radius: 50px !important;
-			border: 1px white solid;
+	border: 2px solid black;
 		}
 
 		::-ms-fill-lower {
@@ -164,12 +165,13 @@ input[type="range"]{
 	position: relative;
 	margin: 1em auto;
 	max-width: 800px;
-	border: 1px solid black;
+	border: 3px solid black;
 	padding: .5em;
 }
 
 .item button {
-	background: magenta;
+	background: white;
+	border: 2px solid black;
 	color: black;
 	margin: .5em .5em;
 }
@@ -207,6 +209,7 @@ body {
 	font-family: 'OPS Favorite';
 	font-family: 'Gap Sans';
 	font-size: 22px;
+	background: yellow;
 }
 
 h1 {
