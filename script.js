@@ -220,33 +220,16 @@ let build = (items, fn) => items.reduce((acc, item) => {
 // SLIDES
 // ---------------------
 
+
+let qr = [
+	[D.caption(h1("LIVE SLIDES!"))],
+	[D.main(imgf('qr'))],
+]
 let intro = [
 	[D.clear],
 	[D.caption(h1("DEMO TALK"))],
 	[D.caption(h1("IF MACHINE WORKS"))],
 	[D.main(videof('compiled'))],
-	// ...build([
-	// 	'IF MACHINE WORKS',
-	// 	'IF MACHINE WORKS',
-	// 	'IF MACHINE WORKS',
-	// 	'IF MACHINE WORKS',
-	// 	'IF MACHINE WORKS',
-	// 	'IF MACHINE WORKS',
-	// 	'IF MACHINE WORKS',
-	// 	'IF MACHINE WORKS',
-	// 	'IF MACHINE WORKS',
-	// 	'IF MACHINE WORKS',
-	// 	'IF MACHINE WORKS',
-	// 	'IF MACHINE WORKS',
-	// 	'IF MACHINE WORKS',
-	// 	'IF MACHINE WORKS',
-	// 	'IF MACHINE WORKS',
-	// 	'IF MACHINE WORKS',
-	// 	'IF MACHINE WORKS',
-	// 	'IF MACHINE WORKS']
-	// 				 .map(e => random(h4(e))),
-	// 				 (total) => [D.main(['div', ...total])]
-	// 				),
 ]
 
 let historyoftools = [
@@ -286,9 +269,7 @@ let softwarerevolution = [
 	[D.caption(h1("The computer"))],
 
 	...build(["craft and technological knowledge of design was shifted ",
-						"   |   ",
-						"   |   ",
-						"   V   ",
+						"     ↓    ",
 						"to computer science and engineering"],
 					 (total) => [D.main(['div', ...total.map(e => p(e))])]),
 
@@ -310,21 +291,18 @@ let softwarerevolution = [
 
 let gapbetweendesign = [
 	[D.clear],
-	[
-		D.caption(h1("Gap between design")),
-	],
+	[D.caption(h1("Gap between design")),],
 
 	...build(["there is this massive gap between the graphic design practice",
-						"     |    ",
-						"     v    ",
+						"     ↓    ",
 						"(as the known editorial, typographic, grid like practice)",
-						"     |    ",
-						"     v    ",
+						"     ↓    ",
 						"and the web graphics",
-						"     |    ",
-						"     v    ",
+						"     ↓    ",
 						"(as graphics to be utilized for artistic practices)"],
 				(total) => [D.main(['div', ...total.map(e => p(e))])]),
+
+	[D.caption(h4("design ↔︎ computer graphics")),],
 	[D.main(giff('diagrams/gap'))]
 ]
 
@@ -350,16 +328,22 @@ let webmaterial = [
 let diveintotools = [
 	[D.clear],
 	[D.caption(h1("TOOLS WE worked on"))],
-	[D.main(h4("Show the tools and stuff"))]
+	[D.main(videof)]
 ]
 
 let treatingcodecraft = [
 	[D.clear],
 	[D.caption(h1("Treating code as craft"))],
 	[D.main(h1("OR..."))],
-	[D.main(imgf("code/coding1"))]
+	[D.main(imgf("code/coding1"))],
+	[D.main(imgf("code/means1"))],
+	[D.main(imgf("code/means2"))],
+	[D.main(imgf("code/venezky1"))],
+	[D.main(imgfj("code/codingclub01"))],
+	[D.main(imgf("code/venezky2"))],
 ]
 let slides = [
+	...qr,
 	...intro,
 	...historyoftools,
 	...softwarerevolution,
