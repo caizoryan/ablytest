@@ -114,6 +114,7 @@ input[type="range"]{
 
 		::-moz-range-thumb {
 			background: #ffffff66;
+			box-shadow: 0 0 13px 8px rgba(0,0,0,.1);
 			height: 60px;
 			width: 60px;
 			box-sizing: border-box;
@@ -127,6 +128,7 @@ input[type="range"]{
 
 		::-ms-thumb {
 			background: #ffffff66;
+			box-shadow: 0 0 5px 8px rgba(0,0,0,.1);
 			height: 60px;
 			width: 60px;
 			box-sizing: border-box;
@@ -142,6 +144,7 @@ input[type="range"]{
 
 		::-ms-track {
 			background: #ddd;
+			box-shadow: 0 0 5px 8px rgba(0,0,0,.1);
 			color: transparent;
 			height: 60px;
 			border: none;
