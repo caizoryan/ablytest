@@ -246,6 +246,7 @@ let historyoftools = [
 			"history/history6",
 			"history/history7",
 			"history/history8",
+			"history/history9",
 		].map(e => random(imgf(e))), (total) =>
 		[D.main(['div', ['.inactive', ...total.slice(0,-1)], total[total.length-1]])]),
 
@@ -266,7 +267,7 @@ let historyoftools = [
 
 let softwarerevolution = [
 	[D.clear],
-	[D.caption(h1("The computer"))],
+	[D.caption(h1("Software revolution"))],
 
 	...build(["craft and technological knowledge of design was shifted ",
 						"     ↓    ",
