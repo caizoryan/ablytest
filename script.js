@@ -320,6 +320,7 @@ let webmaterial = [
 		[
 			"rgb/news",
 			"rgb/tv",
+			"rgb/phone",
 		].map(e => random(imgf(e))), (total) =>
 		[D.main(['div', ['.inactive', ...total.slice(0,-1)], total[total.length-1]])]
 	),
