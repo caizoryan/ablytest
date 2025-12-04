@@ -7,7 +7,7 @@
 :root {
 	--color: black;
 	--background: grey;
-	--highlight : #ff04;
+	--highlight : #ff00;
 	--muted : #2224;
 	--size: 1em;
 
@@ -15,8 +15,11 @@
 	--blur: 0px;
 
 	--outline-color: #0002;
-	--outline-width: 1px;
-	--outline-width-negative: -1px;
+	--outline-width: .1px;
+	--outline-width-negative: -.1px;
+
+	--command-log-size: .6em;
+	--command-log-color: black;
 
 	/* Incement font change */
 	--t1-font: "hermit";
@@ -101,8 +104,10 @@ input.color {
 	opacity: .5;
 }
 .messages {
+
 	font-family: monospace;
-	font-size: .6em;
+	font-size: var(--command-log-size);
+	color: var(--command-log-color);
 	mix-blend-mode: var(--log-blend);
 }
 

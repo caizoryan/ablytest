@@ -64,6 +64,7 @@ let colorput = (alpha = false) => {
 let backgroundColor = colorput()
 let highlight = colorput(true)
 let outlineColor = colorput(true)
+let commandLogColor = colorput(true)
 let textColor = colorput()
 // dom(['input.color', { type: 'color', value: '#0000ff' }])
 let fontFamily = dom(['select',
@@ -101,6 +102,7 @@ let blendmodes = ["normal",
 let logBlend = dom(['select', ...blendmodes.map(e => ['option', { value: e }, e])])
 let blur = dom(['input', {type: 'range', min: 0, max: 1.8, value: 0, step: 0.03 }])
 let outlineWidth = dom(['input', {type: 'range', min: 0, max: 8, value: 0, step: 0.05 }])
+let commandLogSize = dom(['input', {type: 'range', min: .1, max: 1.2, value: 0, step: 0.02 }])
 let item = (title, input, sendfn) =>
 	[".item",
 	['p.title', title],
@@ -125,14 +127,17 @@ let item = (title, input, sendfn) =>
 
 let root = [
 	'.root',
+	item('Typeface', fontFamily, () => send('fontFamily:' + fontFamily.value)),
 	item("Text Color", textColor, () => send('color:' + textColor.value())),
 	item('Background', backgroundColor, () => send('background:' + backgroundColor.value())),
 	item('Highlight', highlight, () => send('highlight:' + highlight.value())),
-	item('Typeface', fontFamily, () => send('fontFamily:' + fontFamily.value)),
-	item('Blur', blur, () => send('blur:' + blur.value + "px")),
 	item('Text Stroke', outlineColor, () => send('outlineColor:' + outlineColor.value())),
 	item('Text Stroke Width', outlineWidth, () => send('outlineWidth:' + outlineWidth.value )),
-	item('Command Log Blend', logBlend, () => send('logBlend:' + logBlend.value)),
+	item('Blur', blur, () => send('blur:' + blur.value + "px")),
+	item('Command Log Size', commandLogSize, () => send('commandLogSize:' + commandLogSize.value + 'em')),
+	item('Command Log Color', commandLogColor, () => send('commandLogColor:' + commandLogColor.value() )),
+item('Command Log Blend', logBlend, () => send('logBlend:' + logBlend.value)),
+
 	// font family
 	// box-shadow
 	// color

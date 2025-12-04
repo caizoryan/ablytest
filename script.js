@@ -325,7 +325,7 @@ let gapbetweendesign = [
 						"     v    ",
 						"(as graphics to be utilized for artistic practices)"],
 				(total) => [D.main(['div', ...total.map(e => p(e))])]),
-	[D.main(imgfj('diagrams/gap'))]
+	[D.main(giff('diagrams/gap'))]
 ]
 
 let designer = [
