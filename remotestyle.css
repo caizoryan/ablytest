@@ -5,7 +5,7 @@
 }
 
 @font-face {
-	font-family: 'gap';
+	font-family: 'Gap Sans';
 	src: url('./GapSans.ttf') format('truetype');
 }
 
@@ -34,10 +34,18 @@
 	--t8-font: "hermit";
 }
 
-.hide {
+button.hide {
+	border: 0px solid black !important;
+	border-bottom: 3px solid black !important;
+	background: var(--background) !important;
 	position: absolute;
-	top: .2em;
-	right: .2em;
+	top: 0em;
+	right: 0em;
+}
+
+button.hide:hover{
+	background: black !important;
+	color: var(--background) !important;
 }
 
 .color {
@@ -46,7 +54,7 @@
 
 .color > * {
 	margin: .2em 0;
-	border-radius: 50px;
+	border-radius: 0px;
 }
 
 .t1 {font-family: var(--t1-font) !important;}
@@ -90,7 +98,7 @@ input.color {
 }
 
 select {
-  border: 2px solid #dddddd;
+  border: 3px solid #dddddd;
   background: #eeeeee;
   padding: 1em;
 	height: 80px;
@@ -102,31 +110,31 @@ select {
 input[type="range"]{
 	height: 60px;
 	background: grey;
-	border: 2px solid black;
+	border: 3px solid black;
 }
 
 ::-webkit-slider-thumb {
 			-webkit-appearance: none;
-			width: 60px;
+			width: 45px;
 			/* 1 */
-			height: 60px;
+			height: 45px;
 			background: #ffffff66;
-			border-radius: 50px !important;
-		border: 2px solid black;
+			border-radius: 0px !important;
+		border: 3px solid black;
 		}
 
 		::-moz-range-track {
-			height: 60px;
+			height: 45px;
 		}
 
 		::-moz-range-thumb {
 			background: #ffffff66;
 			box-shadow: 0 0 13px 8px rgba(0,0,0,.1);
-			height: 60px;
-			width: 60px;
+			height: 45px;
+			width: 45px;
 			box-sizing: border-box;
-			border-radius: 50px !important;
-	border: 2px solid black;
+			border-radius: 0px !important;
+	border: 3px solid black;
 		}
 
 		::-ms-fill-lower {
@@ -136,8 +144,8 @@ input[type="range"]{
 		::-ms-thumb {
 			background: #ffffff66;
 			box-shadow: 0 0 5px 8px rgba(0,0,0,.1);
-			height: 60px;
-			width: 60px;
+			height: 45px;
+			width: 45px;
 			box-sizing: border-box;
 		}
 
@@ -153,7 +161,7 @@ input[type="range"]{
 			background: #ddd;
 			box-shadow: 0 0 5px 8px rgba(0,0,0,.1);
 			color: transparent;
-			height: 60px;
+			height: 45px;
 			border: none;
 		}
 
@@ -171,9 +179,11 @@ input[type="range"]{
 
 .item button {
 	background: white;
-	border: 2px solid black;
+	border: 3px solid black;
 	color: black;
 	margin: .5em .5em;
+	padding: .5em;
+  font-size: 1.5em;
 }
 
 .inactive {

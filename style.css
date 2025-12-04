@@ -32,11 +32,6 @@
 	--t8-font: "hermit";
 }
 
-.hide {
-	position: absolute;
-	top: .2em;
-	right: .2em;
-}
 
 .color {
 	display: grid;

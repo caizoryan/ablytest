@@ -168,8 +168,8 @@ let D = {
 
 let randompos = () =>`
 position: fixed;
-top: ${Math.random() * 80}vh;
-left: ${Math.random() * 80}vw;`
+top: ${Math.random() * 40}vh;
+left: ${Math.random() * 40}vw;`
 
 let empty = ['div']
 let h1 = t => ['h1', ...wrap(t)]

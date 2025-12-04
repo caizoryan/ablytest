@@ -11,7 +11,7 @@ async function publishSubscribe() {
 }
 publishSubscribe();
 
-let setsymbol = '(set)'
+let setsymbol = 'UPDATE'
 
 let colorput = (alpha = false) => {
 	let r = reactive(255)
@@ -48,7 +48,7 @@ let colorput = (alpha = false) => {
 		type: 'range', min: 0, max: 1, value: 0, step: .02, oninput: e =>a.next(e.target.value)
 	}]
 
-	let show = ['div', { style: memo(() => `background-color: rgb(${r.value()}, ${g.value()},${b.value()});width: 50px;height:30px;`, [r, g, b]) }]
+	let show = ['div', { style: memo(() => `background-color: rgb(${r.value()}, ${g.value()},${b.value()});width: 80px;height:50px;`, [r, g, b]) }]
 	let c = dom(['.color', show, rel, gel, bel, alpha ? ael : ''])
 	c.value = () => `rgba(${r.value()}, ${g.value()},${b.value()}, ${a.value()})`
 	return c
