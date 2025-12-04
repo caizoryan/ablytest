@@ -83,6 +83,16 @@ input.color {
 	height: 50px;
 }
 
+select {
+  border: 2px solid #dddddd;
+  background: #eeeeee;
+  padding: 1em;
+	height: 80px;
+	width: 80%;
+	font-size: 1.1em;
+	margin-top: .5em;
+}
+
 input[type="range"]{
 	height: 60px;
 	background: grey;
