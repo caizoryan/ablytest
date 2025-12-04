@@ -9,7 +9,7 @@
 	--background: grey;
 	--highlight : #ff00;
 	--muted : #2224;
-	--size: 1em;
+	--size: 1.5em;
 
 	--log-blend: color-burn; 
 	--blur: 0px;
@@ -61,7 +61,6 @@
 body {
 	background-color: var(--background) !important;
 	color: var(--color);
-	font-size: var(--size);
 }
 
 .mono {
