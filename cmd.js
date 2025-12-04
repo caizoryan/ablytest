@@ -2,7 +2,14 @@ export let setCSS = (k,v) => document.documentElement.style.setProperty(k,v);
 
 let timeouts = []
 let cmds = {
+	outlineWidth: (c) => (
+		setCSS("--outline-width", c+'px'),
+		setCSS("--outline-width-negative", "-"+c+"px")),
+	outlineColor: (c) => setCSS("--outline-color", c),
+	blur: (c) => setCSS("--blur", c),
+	logBlend: (c) => setCSS("--log-blend", c),
 	color: (c) => setCSS("--color", c),
+	highlight: (c) => setCSS("--highlight", c),
 	background: (c) => setCSS("--background", c),
 	fontFamily: (c) => {
 		[1,2,3,4,5,6,7,8].forEach((e) => {
