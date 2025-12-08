@@ -222,13 +222,15 @@ let build = (items, fn) => items.reduce((acc, item) => {
 
 
 let qr = [
+	[D.caption(h1("DEMO TALK"))],
+	[D.main(videof('demotalk'))],
 	[D.caption(h1("LIVE SLIDES!"))],
 	[D.main(imgf('qr'))],
 ]
 let intro = [
 	[D.clear],
-	[D.caption(h1("DEMO TALK"))],
 	[D.caption(h1("IF MACHINE WORKS"))],
+	[D.main(videof('demotalk'))],
 	[D.main(videof('compiled'))],
 ]
 
@@ -251,7 +253,8 @@ let historyoftools = [
 		[D.main(['div', ['.inactive', ...total.slice(0,-1)], total[total.length-1]])]),
 
 
-	...build(["we are in a critical point in time?", "(well always are, we are always a in crsis in history)"]
+	[D.caption(h1("Conventions of now"))],
+	...build(["we are in a critical point in time?", "(we always are, we are always a in crisis in history)"]
 					 .map(e => h4(e)),
 					 (total) => [D.main(['div', ...total])]
 					),
@@ -276,13 +279,13 @@ let softwarerevolution = [
 
 	...build(
 		[
-			"software/gap0",
 			"software/gap1",
 			"software/gap2",
 			"software/gap3",
 			"software/gap4",
 			"software/gap5",
 			"software/gap6",
+			"software/gap7",
 		].map(e => random(imgf(e))), (total) =>
 		[D.main(['div', ['.inactive', ...total.slice(0,-1)], total[total.length-1]])]
 	),
@@ -304,13 +307,19 @@ let gapbetweendesign = [
 				(total) => [D.main(['div', ...total.map(e => p(e))])]),
 
 	[D.caption(h4("design ↔︎ computer graphics")),],
-	[D.main(giff('diagrams/gap'))]
+	[D.main(giff('diagrams/gap'))],
+	[D.main(imgfj("code/codingclub01"))],
+	[D.caption(h4("Creative coding"))],
+	[D.caption(h4("Generative Design"))],
+	[D.caption(h4("Poetic Computation"))],
 ]
 
 let designer = [
 	[D.clear],
-	[D.caption(h1("Proficient in"))],
-	[D.main(imgf('proficient/designer'))]
+	[D.caption(h1("Ok... back to"))],
+	[D.main(h1("The current crisis"))],
+	[D.main(imgf('proficient/designer'))],
+	[D.caption(h1("Proficient Designer"))],
 ]
 
 let webmaterial = [
@@ -329,8 +338,26 @@ let webmaterial = [
 
 let diveintotools = [
 	[D.clear],
-	[D.caption(h1("TOOLS WE worked on"))],
-	[D.main(videof)]
+	[D.caption(h1("Some of our tools"))],
+	[D.main(videof('tools/dto1'))],
+	[D.main(videof('tools/dto2'))],
+	[D.main(videof('tools/dto3'))],
+	[D.main(videof('tools/dto4'))],
+	[D.main(videof('tools/drawing1'))],
+	[D.main(videof('tools/light1'))],
+	[D.main(videof('tools/light2'))],
+	[D.main(videof('tools/light3'))],
+	[D.main(videof('tools/light4'))],
+	[D.main(videof('tools/pub0'))],
+	[D.main(imgf('tools/pub4'))],
+	[D.main(imgf('tools/pub5'))],
+	[D.main(videof('tools/pub1'))],
+	[D.main(videof('tools/pub2'))],
+	[D.main(imgf('tools/pub1'))],
+	[D.main(imgf('tools/pub2'))],
+	[D.main(imgf('tools/pub3'))],
+	[D.main(videof('tools/pub3'))],
+	[D.main(videof('tools/pub4'))],
 ]
 
 let treatingcodecraft = [
@@ -344,6 +371,14 @@ let treatingcodecraft = [
 	[D.main(imgfj("code/codingclub01"))],
 	[D.main(imgf("code/venezky2"))],
 ]
+
+let end = [
+	[D.clear],
+	[D.caption(h1("Wrap up"))],
+	[D.main(imgf("end/last1"))],
+	[D.main(imgf("end/last2"))],
+	[D.main(imgf("end/last3"))],
+]
 let slides = [
 	...qr,
 	...intro,
@@ -353,7 +388,8 @@ let slides = [
 	...designer,
 	...webmaterial,
 	...diveintotools,
-	...treatingcodecraft
+	...treatingcodecraft,
+	...end
 ]
 
 document.onkeydown = e => {
